@@ -9,3 +9,5 @@ Nuevo repo para el trabajo
 - Jose Salceda
   - Añadido node_modules
   - Añadidas las colecciones "editorial","sagas" y "stockconduccion" tanto a la carpeta modules como a routes
+- Adrian
+  - Añadidas las colecciones "
