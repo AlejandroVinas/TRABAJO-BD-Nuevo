@@ -9,7 +9,8 @@
 
     var SagasSchema = new Schema({
         ID: Number,
-        Saga: String
+	    NombreSaga: String,
+        NumeroDeTitulos: Number
     });
 
     module.exports = mongoose.model('sagas', SagasSchema);

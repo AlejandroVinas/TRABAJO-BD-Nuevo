@@ -9,7 +9,8 @@
 
     var EditorialSchema = new Schema({
         ID: Number,
-        Editorial: String
+        NombreEditorial: String,
+        NumeroDeTitulos: Number
     });
 
     module.exports = mongoose.model('editorial', EditorialSchema);
