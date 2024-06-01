@@ -2,17 +2,17 @@
     'use strict';
 
     module.exports = {
-        addGeneros: addGeneros,
-        getGeneros: getGeneros,
-        getGenerosById: getGenerosById,
-        modifyGeneros: modifyGeneros,
-        removeGeneros: removeGeneros
+        addGenerosmesa: addGenerosmesa,
+        getGenerosmesa: getGenerosmesa,
+        getGenerosmesaById: getGenerosmesaById,
+        modifyGenerosmesa: modifyGenerosmesa,
+        removeGenerosmesa: removeGenerosmesa
     };
    
-    var GenerosService = require('./generosmesa.module')().GenerosService;
+    var GenerosmesaService = require('./generosmesa.module')().GenerosmesaService;
 
-    function addGeneros(req, res, next) {
-        GenerosService.createUser(req.body)
+    function addGenerosmesa(req, res, next) {
+        GenerosmesaService.createUser(req.body)
             .then(success)
             .catch(failure);
 
@@ -27,9 +27,9 @@
 
     }
 
-    function getGeneros(req, res, next) {
+    function getGenerosmesa(req, res, next) {
 
-        GenerosService.fetchGeneros()
+        GenerosmesaService.fetchGenerosmesa()
             .then(success)
             .catch(failure);
 
@@ -44,9 +44,9 @@
 
     }
 
-    function getGenerosById(req, res, next) {
+    function getGenerosmesaById(req, res, next) {
 
-        GenerosService.fetchGenerosById(req.params.userId)
+        GenerosmesaService.fetchGenerosmesaById(req.params.userId)
             .then(success)
             .catch(failure);
 
@@ -61,8 +61,8 @@
 
     }
 
-function modifyGeneros(req, res, next) {
-        GenerosService.updateGeneros(req.params.generosmesaId, req.body)
+function modifyGenerosmesa(req, res, next) {
+        GenerosmesaService.updateGenerosmesa(req.params.generosmesaId, req.body)
             .then(success)
             .catch(error);
 
@@ -76,9 +76,9 @@ function modifyGeneros(req, res, next) {
         }
     }
 
-    function removeGeneros(req, res, next) {
+    function removeGenerosmesa(req, res, next) {
 
-        UserService.deleteGeneros(req.params.generosmesaId)
+        UserService.deleteGenerosmesa(req.params.generosmesaId)
             .then(success)
             .catch(error);
 
