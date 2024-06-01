@@ -4,4 +4,7 @@ Nuevo repo para el trabajo
 
 ### Se irán reflejando los cambios del proyecto aquí:
 - Alejandro
-  * Añadido el api salvo node_modules
+  - Añadido todo el api salvo node_modules
+  - Añadidas las colecciones "generosmesa","editorialsmesa" y "stocksmesa" tanto a la carpeta modules como a routes
+- Jose Salceda
+  - Añadido node_modules
