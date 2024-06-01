@@ -9,7 +9,11 @@
 
     var StockconduccionSchema = new Schema({
         ID: Number,
-        Conduccion: String
+        Nombre: String,
+        Editorial: String,
+        Saga: String,
+        Precio: Number,
+        Stock: Number
     });
 
     module.exports = mongoose.model('stockconduccion', StockconduccionSchema);
