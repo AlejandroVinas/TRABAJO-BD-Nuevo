@@ -9,7 +9,7 @@
      
     var DesarrolladoraSchema = new Schema({
          ID: Number,
-         Genero: String
+         Desarrolladora: String
     });
 
     module.exports = mongoose.model('Desarrolladora', DesarrolladoraSchema);

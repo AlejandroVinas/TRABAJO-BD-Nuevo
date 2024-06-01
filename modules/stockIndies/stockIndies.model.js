@@ -8,8 +8,12 @@
     var Schema = mongoose.Schema;     
      
     var StockIndiesSchema = new Schema({
-         ID: Number,
-         Genero: String
+        ID: Number,
+        Nombre: String,
+        stock: Number,
+        Genero: String,
+        Desarrollador: String,
+        Precio: String
     });
 
     module.exports = mongoose.model('stockindies', StockIndiesSchema);
