@@ -1,43 +1,16 @@
-(function () {
-    'use strict';
+var MongoDBUtil = require( 'mongodb' );
+const url = "mongodb://localhost:27017/tienda";
+var _db;
 
-    module.exports = {
-        init: init
-    };
+module.exports = {
+  init: function( callback ) {
+    MongoDBUtil.connect( url,  { useNewUrlParser: true }, function( err, client ) {
+      _db  = client.db('tienda');
+      return _db;
+    } );
+  },
+  getDb: function() {
+    return _db;
+  }
+};
 
-    var mongoose = require('mongoose');
-
-    var mongodbConfig = require('../../config/mongodb/mongodb-config').mongodb;
-
-    function init() {
-        var options = {
-            promiseLibrary: require('bluebird'),
-            useNewUrlParser: true,
-			useUnifiedTopology: true 
-        };
-
-        var connectionString = prepareConnectionString(mongodbConfig);
-       
-        mongoose.connect(connectionString, options)
-            .then(function (result) {
-                console.log("MongoDB connection successful. DB: " + connectionString);
-            })
-            .catch(function (error) {
-                console.log(error.message);
-                console.log("Error occurred while connecting to DB: : " + connectionString);
-            });
-    }
-
-    function prepareConnectionString(config) {
-        var connectionString = 'mongodb://';
-
-        if (config.user) {
-            connectionString += config.user + ':' + config.password + '@';
-        }
-
-        connectionString += config.server + '/' + config.database;
-
-        return connectionString;
-    }
-
-})();
