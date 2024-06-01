@@ -8,7 +8,7 @@
     var Schema = mongoose.Schema;     
      
     var EncargosSchema = new Schema({
-        id:{type:String},
+        id:{type:Number},
         id_cliente:{type:Number},
         id_producto:{type:Number},
         cantidad:{type:Number},
