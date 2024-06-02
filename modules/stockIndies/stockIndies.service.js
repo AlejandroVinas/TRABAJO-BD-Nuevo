@@ -18,11 +18,14 @@
     function fetchStockIndies() {
         return StockIndiesModel.find({})
             .populate('Desarrollador')
+            .populate('Genero')
             .exec();
     }
 
     function fetchStockIndiesById(stockIndiesId) {
         return StockIndiesModel.findById(stockIndiesId)
+            .populate('Desarrollador')
+            .populate('Genero')
             .exec();
     }
 

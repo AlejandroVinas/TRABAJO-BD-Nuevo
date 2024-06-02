@@ -11,7 +11,7 @@
         ID: Number,
         Nombre: String,
         stock: Number,
-        Genero: String,
+        Genero: { type: Schema.Types.ObjectId, ref: 'Generos' },
         Desarrollador: { type: Schema.Types.ObjectId, ref: 'Desarrolladora' },
         Precio: String
     });
