@@ -7,7 +7,7 @@ const desarrolladoraData = require("./data/DatosDesarrolladora");
 const editorial = require("./modules/editorial/editorial.model");
 const editorialData = require("./data/DatosEditorial");
 
-const editorialsmesa = require("./modules/editorialmesa/editorialmesa.model");
+const editorialsmesa = require("./modules/editorialsmesa/editorialsmesa.model");
 const editorialmesaData = require("./data/DatosEditorialsmesa");
 
 const empleados = require("./modules/empleados/empleados.model");
@@ -85,3 +85,5 @@ async function insertDataIfEmpty() {
         mongoose.disconnect();
     }
 }
+
+module.exports = insertDataIfEmpty;

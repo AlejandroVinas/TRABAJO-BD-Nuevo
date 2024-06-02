@@ -61,7 +61,7 @@ app.use('/stockconduccion', StockConduccionController);
 app.use('/stockindies', StockIndiesController);
 app.use('/stocksmesa', StocksmesaController);
 
-const insertData = require('./InsertData');
+const insertDataIfEmpty = require('./InsertData');
 insertDataIfEmpty();
 
 app.get('/', function (req, res) {
