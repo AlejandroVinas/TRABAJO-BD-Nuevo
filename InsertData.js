@@ -85,3 +85,5 @@ async function insertDataIfEmpty() {
         mongoose.disconnect();
     }
 }
+
+module.exports = insertDataIfEmpty;
