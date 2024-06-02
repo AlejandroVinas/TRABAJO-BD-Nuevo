@@ -64,11 +64,7 @@ try {
 }
 
 const insertDataIfEmpty = require('./InsertData');
-
-// Asegurarse de que la conexión esté lista antes de insertar datos
-MongoDBUtil.init(async () => {
-    await insertDataIfEmpty();
-});
+insertDataIfEmpty();
 
 app.get('/', function (req, res) {
     var pkg = require(path.join(__dirname, 'package.json'));
