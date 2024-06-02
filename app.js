@@ -13,9 +13,9 @@ console.log(MongoDBUtil);
 MongoDBUtil.init();
 
 var UserController = require('./modules/user/user.module')().UserController;
-var DesarrolladoraController = require('./modules/desarrolladora/desarrolladora.module')().DesarrolladoraController;
+var DesarroladoraController = require('./modules/desarrolladora/desarroladora.module')().DesarroladoraController;
 var EditorialController = require('./modules/editorial/editorial.module')().EditorialController;
-var EditorialmesaController = require('./modules/editorialmesa/editorialmesa.module')().EditorialmesaController;
+var EditorialsmesaController = require('./modules/editorialsmesa/editorialsmesa.module')().EditorialsmesaController;
 var EmpleadosController = require('./modules/empleados/empleados.module')().EmpleadosController;
 var EncargosController = require('./modules/encargos/encargos.module')().EncargosController;
 var GenerosController = require('./modules/generos/generos.module')().GenerosController;
@@ -34,9 +34,9 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 app.use('/users', UserController);
-app.use('/desarrolladora', DesarrolladoraController);
+app.use('/desarrolladora', DesarroladoraController);
 app.use('/editorial', EditorialController);
-app.use('/editorialmesa', EditorialmesaController);
+app.use('/editorialsmesa', EditorialsmesaController);
 app.use('/empleados', EmpleadosController);
 app.use('/encargos', EncargosController);
 app.use('/generos', GenerosController);
@@ -91,13 +91,13 @@ app.get('/data/datosdesarrolladora/id/:minId', (req, res) => {
 });
 
 // Queries for datoseditoriaslsmesa
-app.get('/data/datoseditoriaslsmesa/games/:minGames', (req, res) => {
+app.get('/data/datoseditorialsmesa/games/:minGames', (req, res) => {
     const minGames = parseInt(req.params.minGames, 10);
     const editorials = datoseditoriaslsmesa.filter(e => e.juegos_en_tienda > minGames);
     res.json(editorials);
 });
 
-app.get('/data/datoseditoriaslsmesa/name/:name', (req, res) => {
+app.get('/data/datoseditorialsmesa/name/:name', (req, res) => {
     const name = req.params.name;
     const editorial = datoseditoriaslsmesa.find(e => e.nombre === name);
     res.json(editorial || {});

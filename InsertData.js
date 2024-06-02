@@ -2,14 +2,14 @@ const mongoose = require("mongoose");
 const { getDb } = require("./modules/mongodb/mongodb.util");
 
 // Importar los modelos y los datos
-const desarrolladora = require("./modules/desarrolladora/desarrolladora.model");
+const desarrolladora = require("./modules/desarrolladora/desarroladora.model");
 const desarrolladoraData = require("./data/DatosDesarrolladora");
 
 const editorial = require("./modules/editorial/editorial.model");
 const editorialData = require("./data/DatosEditorial");
 
-const editorialsmesa = require("./modules/editorialmesa/editorialmesa.model");
-const editorialmesaData = require("./data/DatosEditorialsmesa");
+const editorialsmesa = require("./modules/editorialsmesa/editorialsmesa.model");
+const editorialsmesaData = require("./data/DatosEditorialsmesa");
 
 const empleados = require("./modules/empleados/empleados.model");
 const empleadosData = require("./data/DatosEmpleados");
@@ -48,7 +48,7 @@ async function isDatabaseEmpty() {
 async function insertData() {
     await desarrolladora.insertMany(desarrolladoraData);
     await editorial.insertMany(editorialData);
-    await editorialsmesa.insertMany(editorialmesaData);
+    await editorialsmesa.insertMany(editorialsmesaData);
     await empleados.insertMany(empleadosData);
     await encargos.insertMany(encargosData);
     await generos.insertMany(generosData);
