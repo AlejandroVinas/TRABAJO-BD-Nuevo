@@ -16,3 +16,4 @@ Nuevo repo para el trabajo
 - Miguel
   - Añadido y revisado todo lo referente a las tablas "empleados", "miembros" y "encargos"
   - Realizadas las ejecuciones para comprobar el progreso y la funcionalidad del api
+  - Implementada la inserción de código si la base de datos está vacía
