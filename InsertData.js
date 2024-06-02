@@ -40,8 +40,33 @@ const stocksmesaData = require("./data/DatosStocksmesa");
 
 // Comprobar si hay datos
 async function isDatabaseEmpty() {
-    const count = await desarrolladora.countDocuments();
-    return count === 0;
+    const desarrolladoraCount = await desarrolladora.countDocuments();
+    const editorialCount = await editorial.countDocuments();
+    const editorialsmesaCount = await editorialsmesa.countDocuments();
+    const empleadosCount = await empleados.countDocuments();
+    const encargosCount = await encargos.countDocuments();
+    const generosCount = await generos.countDocuments();
+    const generosmesaCount = await generosmesa.countDocuments();
+    const miembrosCount = await miembros.countDocuments();
+    const sagasCount = await sagas.countDocuments();
+    const stockConduccionCount = await stockConduccion.countDocuments();
+    const stockIndiesCount = await stockIndies.countDocuments();
+    const stocksmesaCount = await stocksmesa.countDocuments();
+
+    return (
+        desarrolladoraCount === 0 &&
+        editorialCount === 0 &&
+        editorialsmesaCount === 0 &&
+        empleadosCount === 0 &&
+        encargosCount === 0 &&
+        generosCount === 0 &&
+        generosmesaCount === 0 &&
+        miembrosCount === 0 &&
+        sagasCount === 0 &&
+        stockConduccionCount === 0 &&
+        stockIndiesCount === 0 &&
+        stocksmesaCount === 0
+    );
 }
 
 // Insertar datos
