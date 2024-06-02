@@ -9,7 +9,7 @@
         deleteGenerosmesa: deleteGenerosmesa
     };
 
-    var GenerosmesaModel = require('./generos.module')().GenerosmesaModel;
+    var GenerosmesaModel = require('./generosmesa.module')().GenerosmesaModel;
     function createGenerosmesa(generos) {
         return GenerosmesaModel.create(generos);
     }
