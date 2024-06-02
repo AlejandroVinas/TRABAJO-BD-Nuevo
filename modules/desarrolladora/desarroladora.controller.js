@@ -4,7 +4,7 @@
     var express = require('express');
     var router = express.Router();
 
-    var DesarrolladoraMiddleware = require('./desarrolladora.module')().DesarrolladoraMiddleware;
+    var DesarrolladoraMiddleware = require('./desarroladora.module')().DesarrolladoraMiddleware;
 
     router.post('/',
         DesarrolladoraMiddleware.addDesarrolladora,

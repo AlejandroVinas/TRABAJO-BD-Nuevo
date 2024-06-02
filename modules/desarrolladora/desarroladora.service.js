@@ -9,7 +9,7 @@
         deleteDesarrolladora: deleteDesarrolladora
     };
 
-    var DesarrolladoraModel = require('./desarrolladora.module')().DesarrolladoraModel;
+    var DesarrolladoraModel = require('./desarroladora.module')().DesarrolladoraModel;
 
     function createDesarrolladora(desarrolladora) {
         return DesarrolladoraModel.create(desarrolladora);
