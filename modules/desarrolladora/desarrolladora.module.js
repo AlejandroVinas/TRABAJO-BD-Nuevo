@@ -5,10 +5,10 @@
 
     function init() {
         return {
-            DesarrolladoraController: require('./desarrolladora.controller'),
-            DesarrolladoraMiddleware: require('./desarrolladora.middleware'),
-            DesarrolladoraService: require('./desarrolladora.service'),
-            DesarrolladoraModel: require('./desarrolladora.model')
+            DesarrolladoraController: require('./desarroladora.controller'),
+            DesarrolladoraMiddleware: require('./desarroladora.middleware'),
+            DesarrolladoraService: require('./desarroladora.service'),
+            DesarrolladoraModel: require('./desarroladora.model')
         };
     }
 
