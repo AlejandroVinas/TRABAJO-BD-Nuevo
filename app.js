@@ -12,39 +12,56 @@ var MongoDBUtil = require('./modules/mongodb/mongodb.util');
 console.log(MongoDBUtil);
 MongoDBUtil.init();
 
-var UserController = require('./modules/user/user.module')().UserController;
-var DesarrolladoraController = require('./modules/desarrolladora/desarrolladora.module')().DesarrolladoraController;
-var EditorialController = require('./modules/editorial/editorial.module')().EditorialController;
-var EditorialsmesaController = require('./modules/editorialsmesa/editorialsmesa.module')().EditorialsmesaController;
-var EmpleadosController = require('./modules/empleados/empleados.module')().EmpleadosController;
-var EncargosController = require('./modules/encargos/encargos.module')().EncargosController;
-var GenerosController = require('./modules/generos/generos.module')().GenerosController;
-var GenerosmesaController = require('./modules/generosmesa/generosmesa.module')().GenerosmesaController;
-var MiembrosController = require('./modules/miembros/miembros.module')().MiembrosController;
-var SagasController = require('./modules/sagas/sagas.module')().SagasController;
-var StockConduccionController = require('./modules/stockConduccion/stockConduccion.module')().StockConduccionController;
-var StockIndiesController = require('./modules/stockIndies/stockIndies.module')().StockIndiesController;
-var StocksmesaController = require('./modules/stocksmesa/stocksmesa.module')().StocksmesaController;
+try {
+    const UserController = require('./modules/user/user.module')().UserController;
+    console.log('UserController loaded:', !!UserController);
+    const DesarrolladoraController = require('./modules/desarrolladora/desarrolladora.module')().DesarrolladoraController;
+    console.log('DesarrolladoraController loaded:', !!DesarrolladoraController);
+    const EditorialController = require('./modules/editorial/editorial.module')().EditorialController;
+    console.log('EditorialController loaded:', !!EditorialController);
+    const EditorialsmesaController = require('./modules/editorialsmesa/editorialsmesa.module')().EditorialsmesaController;
+    console.log('EditorialsmesaController loaded:', !!EditorialsmesaController);
+    const EmpleadosController = require('./modules/empleados/empleados.module')().EmpleadosController;
+    console.log('EmpleadosController loaded:', !!EmpleadosController);
+    const EncargosController = require('./modules/encargos/encargos.module')().EncargosController;
+    console.log('EncargosController loaded:', !!EncargosController);
+    const GenerosController = require('./modules/generos/generos.module')().GenerosController;
+    console.log('GenerosController loaded:', !!GenerosController);
+    const GenerosmesaController = require('./modules/generosmesa/generosmesa.module')().GenerosmesaController;
+    console.log('GenerosmesaController loaded:', !!GenerosmesaController);
+    const MiembrosController = require('./modules/miembros/miembros.module')().MiembrosController;
+    console.log('MiembrosController loaded:', !!MiembrosController);
+    const SagasController = require('./modules/sagas/sagas.module')().SagasController;
+    console.log('SagasController loaded:', !!SagasController);
+    const StockconduccionController = require('./modules/stockConduccion/stockconduccion.module')().StockconduccionController;
+    console.log('StockConduccionController loaded:', !!StockconduccionController);
+    const StockIndiesController = require('./modules/stockIndies/stockIndies.module')().StockIndiesController;
+    console.log('StockIndiesController loaded:', !!StockIndiesController);
+    const StocksmesaController = require('./modules/stocksmesa/stocksmesa.module')().StocksmesaController;
+    console.log('StocksmesaController loaded:', !!StocksmesaController);
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(bodyParser.json());
+    app.use(logger('dev'));
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));
+    app.use(cookieParser());
+    app.use(bodyParser.json());
 
-app.use('/users', UserController);
-app.use('/desarrolladora', DesarrolladoraController);
-app.use('/editorial', EditorialController);
-app.use('/editorialsmesa', EditorialsmesaController);
-app.use('/empleados', EmpleadosController);
-app.use('/encargos', EncargosController);
-app.use('/generos', GenerosController);
-app.use('/generosmesa', GenerosmesaController);
-app.use('/miembros', MiembrosController);
-app.use('/sagas', SagasController);
-app.use('/stockconduccion', StockConduccionController);
-app.use('/stockindies', StockIndiesController);
-app.use('/stocksmesa', StocksmesaController);
+    app.use('/users', UserController);
+    app.use('/desarrolladora', DesarrolladoraController);
+    app.use('/editorial', EditorialController);
+    app.use('/editorialsmesa', EditorialsmesaController);
+    app.use('/empleados', EmpleadosController);
+    app.use('/encargos', EncargosController);
+    app.use('/generos', GenerosController);
+    app.use('/generosmesa', GenerosmesaController);
+    app.use('/miembros', MiembrosController);
+    app.use('/sagas', SagasController);
+    app.use('/stockconduccion', StockconduccionController);
+    app.use('/stockindies', StockIndiesController);
+    app.use('/stocksmesa', StocksmesaController);
+} catch (error) {
+    console.error("Error loading controllers:", error);
+}
 
 const insertDataIfEmpty = require('./InsertData');
 
