@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { getDb } = require("./modules/mongodb/mongodb.util");
 
 // Importar los modelos y los datos
-const desarrolladora = require("./modules/desarrolladora/desarroladora.model");
+const desarrolladora = require("./modules/desarrolladora/desarrolladora.model");
 const desarrolladoraData = require("./data/DatosDesarrolladora");
 
 const editorial = require("./modules/editorial/editorial.model");

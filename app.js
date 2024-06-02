@@ -13,7 +13,7 @@ console.log(MongoDBUtil);
 MongoDBUtil.init();
 
 var UserController = require('./modules/user/user.module')().UserController;
-var DesarroladoraController = require('./modules/desarrolladora/desarroladora.module')().DesarroladoraController;
+var DesarrolladoraController = require('./modules/desarrolladora/desarrolladora.module')().DesarrolladoraController;
 var EditorialController = require('./modules/editorial/editorial.module')().EditorialController;
 var EditorialsmesaController = require('./modules/editorialsmesa/editorialsmesa.module')().EditorialsmesaController;
 var EmpleadosController = require('./modules/empleados/empleados.module')().EmpleadosController;
@@ -34,7 +34,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 app.use('/users', UserController);
-app.use('/desarrolladora', DesarroladoraController);
+app.use('/desarrolladora', DesarrolladoraController);
 app.use('/editorial', EditorialController);
 app.use('/editorialsmesa', EditorialsmesaController);
 app.use('/empleados', EmpleadosController);
