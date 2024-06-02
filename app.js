@@ -11,20 +11,23 @@ var MongoDBUtil = require('./modules/mongodb/mongodb.util');
 console.log(MongoDBUtil);
 MongoDBUtil.init();
 
-
 var UserController = require('./modules/user/user.module')().UserController;
 var GenerosController = require('./modules/generos/generos.module')().GenerosController;
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/users', UserController);
 app.use('/generos', GenerosController);
 
 const insertDataIfEmpty = require('./InsertData');
-insertDataIfEmpty();
+
+// Asegurarse de que la conexión esté lista antes de insertar datos
+MongoDBUtil.init(async () => {
+    await insertDataIfEmpty();
+});
 
 app.get('/', function (req, res) {
     var pkg = require(path.join(__dirname, 'package.json'));
@@ -48,7 +51,6 @@ app.use(function (err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
-
     res.json({
         message: res.locals.message,
         error: res.locals.error
@@ -58,5 +60,5 @@ app.use(function (err, req, res, next) {
 module.exports = app;
 const port = 3000;
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });
