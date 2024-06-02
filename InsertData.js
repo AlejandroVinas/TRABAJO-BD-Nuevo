@@ -28,7 +28,7 @@ const miembrosData = require("./data/DatosMiembros");
 const sagas = require("./modules/sagas/sagas.model");
 const sagasData = require("./data/DatosSagas");
 
-const stockConduccion = require("./modules/stockConduccion/stockConduccion.model");
+const stockConduccion = require("./modules/stockConduccion/stockconduccion.model");
 const stockConduccionData = require("./data/DatosStockconduccion");
 
 const stockIndies = require("./modules/stockIndies/stockIndies.model");

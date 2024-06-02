@@ -9,18 +9,18 @@ var app = express();
 
 var MongoDBUtil = require('./modules/mongodb/mongodb.util');
 
-const datoseditorial = require('./data/datoseditorial');
-const datosdesarrolladora = require('./data/datosdesarrolladora');
-const datoseditoriaslsmesa = require('./data/datoseditoriaslsmesa');
-const datosEmpleados = require('./data/datosEmpleados');
-const datosEncargos = require('./data/datosEncargos');
-const datosgenero = require('./data/datosgenero');
-const datosgenerosmesa = require('./data/datosgenerosmesa');
-const datosMiembros = require('./data/datosMiembros');
-const datosSagas = require('./data/datosSagas');
-const datosstock = require('./data/datosstock');
-const datosstockconduccion = require('./data/datosstockconduccion');
-const datosstocksmesa = require('./data/datosstocksmesa');
+const DatosEditorial = require('./data/DatosEditorial');
+const DatosDesarrolladora = require('./data/DatosDesarrolladora');
+const DatosEditoriaslsmesa = require('./data/DatosEditoriaslsmesa');
+const DatosEmpleados = require('./data/DatosEmpleados');
+const DatosEncargos = require('./data/DatosEncargos');
+const DatosGenero = require('./data/DatosGenero');
+const DatosGenerosmesa = require('./data/DatosGenerosmesa');
+const DatosMiembros = require('./data/DatosMiembros');
+const DatosSagas = require('./data/DatosSagas');
+const DatosStock = require('./data/DatosStock');
+const DatosStockconduccion = require('./data/DatosStockconduccion');
+const DatosStocksmesa = require('./data/DatosStocksmesa');
 
 console.log(MongoDBUtil);
 MongoDBUtil.init();
