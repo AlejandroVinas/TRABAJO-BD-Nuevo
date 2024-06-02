@@ -16,6 +16,7 @@ Nuevo repo para el trabajo
 - Adrian
   - Añadidas las colecciones "desarrolladora", "generos" y "stockindies" tanto a la carpeta modules como a routes
   - Añadido una relación entre Desarrolladora y stockIndies
+  - Añadida otra relación entre StockIndies y Generos
 - Miguel
   - Añadido y revisado todo lo referente a las tablas "empleados", "miembros" y "encargos"
   - Realizadas las ejecuciones para comprobar el progreso y la funcionalidad del api
