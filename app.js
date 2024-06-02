@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use('/users', UserController);
 app.use('/generos', GenerosController);
 
-const insertData = require('./InsertData');
+const insertDataIfEmpty = require('./InsertData');
 insertDataIfEmpty();
 
 app.get('/', function (req, res) {
