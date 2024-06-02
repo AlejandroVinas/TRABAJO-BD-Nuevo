@@ -20,7 +20,7 @@
         });
 
     router.get('/:userId',
-        EditorialsmesaMiddleware,getEditorialsmesaById,
+        EditorialsmesaMiddleware.getEditorialsmesaById,
         function (req, res) {
             res.status(200).json(req.response);
         });
