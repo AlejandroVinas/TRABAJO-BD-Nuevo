@@ -22,7 +22,6 @@ var GenerosController = require('./modules/generos/generos.module')().GenerosCon
 var GenerosmesaController = require('./modules/generosmesa/generosmesa.module')().GenerosmesaController;
 var MiembrosController = require('./modules/miembros/miembros.module')().MiembrosController;
 var SagasController = require('./modules/sagas/sagas.module')().SagasController;
-var StockController = require('./modules/stock/stock.module')().StockController;
 var StockConduccionController = require('./modules/stockConduccion/stockConduccion.module')().StockConduccionController;
 var StockIndiesController = require('./modules/stockIndies/stockIndies.module')().StockIndiesController;
 var StocksmesaController = require('./modules/stocksmesa/stocksmesa.module')().StocksmesaController;
@@ -43,7 +42,6 @@ app.use('/generos', GenerosController);
 app.use('/generosmesa', GenerosmesaController);
 app.use('/miembros', MiembrosController);
 app.use('/sagas', SagasController);
-app.use('/stock', StockController);
 app.use('/stockconduccion', StockConduccionController);
 app.use('/stockindies', StockIndiesController);
 app.use('/stocksmesa', StocksmesaController);
