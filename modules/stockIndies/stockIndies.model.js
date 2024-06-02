@@ -12,7 +12,7 @@
         Nombre: String,
         stock: Number,
         Genero: String,
-        Desarrollador: String,
+        Desarrollador: { type: Schema.Types.ObjectId, ref: 'Desarrolladora' },
         Precio: String
     });
 

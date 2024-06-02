@@ -17,6 +17,7 @@
 
     function fetchStockIndies() {
         return StockIndiesModel.find({})
+            .populate('Desarrollador')
             .exec();
     }
 

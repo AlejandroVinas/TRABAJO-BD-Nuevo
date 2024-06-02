@@ -8,8 +8,9 @@
     var Schema = mongoose.Schema;     
      
     var DesarrolladoraSchema = new Schema({
-         ID: Number,
-         Desarrolladora: String
+        ID: Number,
+        Desarrolladora: String,
+        juegos: [{ type: Schema.Types.ObjectId, ref: 'stockindies' }]
     });
 
     module.exports = mongoose.model('Desarrolladora', DesarrolladoraSchema);
