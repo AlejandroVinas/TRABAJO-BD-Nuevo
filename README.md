@@ -11,6 +11,8 @@ Nuevo repo para el trabajo
 - Jose Salceda
   - Añadido node_modules
   - Añadidas las colecciones "editorial","sagas" y "stockconduccion" tanto a la carpeta modules como a routes
+  - Añadidas queries muy variadas, (24)
+  - Arreglados posibles errores en app.js
 - Adrian
   - Añadidas las colecciones "desarrolladora", "generos" y "stockindies" tanto a la carpeta modules como a routes
 - Miguel
